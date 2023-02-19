@@ -14,21 +14,6 @@ public class TicketRepository {
         tickets = tmp;
     }
 
-    public void removeById(int reId) {
-        if (findById(reId) == null) {
-            throw new NotFoundException(reId);
-        }
-
-        Ticket[] tmp = new Ticket[tickets.length - 1];
-        int copyToIndex = 0;
-        for (Ticket product : tickets) {
-            if (product.getId() != reId) {
-                tmp[copyToIndex] = product;
-            }
-            copyToIndex++;
-        }
-        tickets = tmp;
-    }
 
     public Ticket findById(int id) {
         for (Ticket product : tickets) {

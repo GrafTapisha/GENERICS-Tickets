@@ -12,9 +12,6 @@ public class TicketManager {
         repository.add(ticket);
     }
 
-    public void removeById(int id) {
-        repository.removeById(id);
-    }
 
     public Ticket[] findAll(String from, String to) {
         Ticket[] result = new Ticket[0];
